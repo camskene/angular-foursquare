@@ -1,5 +1,17 @@
 <form ng-submit="doSearch()">
-    <input type="text" ng-model="exploreNearby">
-    <input type="text" ng-model="exploreQuery">
+    <input type="text" ng-model="exploreNearby" placeholder="Explore Places In. e.g. New York">
+    <input type="text" ng-model="exploreQuery" placeholder="Specify Category. e.g. Burger">
     <button>Submit</button>
 </form>
+
+<div ng-show="totalRecordsCount == 0">
+    <p>No places found near {{ exploreNearby }}</p>
+</div>
+
+<div ng-show="totalRecordsCount > 0">
+    <ul>
+        <li ng-repeat="place in filteredPlaces">
+            {{ place.venue.name }}
+        </li>
+    </ul>
+</div>

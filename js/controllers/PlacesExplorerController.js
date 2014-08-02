@@ -8,7 +8,7 @@ app.controller("PlacesExplorerController", function($scope, placesExplorerServic
     $scope.filteredPlacesCount = 0;
 
     // paging
-    $scope.totalRecordCount = 0;
+    $scope.totalRecordsCount = 0;
     $scope.pageSize = 10;
     $scope.currentPage = 1;
 
