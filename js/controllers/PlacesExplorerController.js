@@ -1,5 +1,5 @@
 app.controller("PlacesExplorerController", function($scope, placesExplorerService,  $filter) {
-    $scope.exploreNearby = "New York";
+    $scope.exploreNearby = "Byron Bay";
     $scope.exploreQuery = "";
     $scope.filterValue = "";
 
@@ -62,7 +62,7 @@ app.controller("PlacesExplorerController", function($scope, placesExplorerServic
     };
 
     $scope.buildCategoryIcon = function(icon) {
-        return icon.prefix + "44" + icon.suffix;
+        return icon.prefix + "bg_" +  "44" + icon.suffix;
     };
 
     $scope.buildVenueThumbnail = function(photo) {

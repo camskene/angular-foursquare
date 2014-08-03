@@ -11,7 +11,10 @@
 <div ng-show="totalRecordsCount > 0">
     <ul>
         <li ng-repeat="place in filteredPlaces">
-            {{ place.venue.name }}
+            <h4>{{ place.venue.name }}</h4>
+            <figure>
+                <img ng-src="{{buildCategoryIcon(place.venue.categories[0].icon)}}" alt="" />
+            </figure>
         </li>
     </ul>
 </div>
